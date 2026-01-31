@@ -238,7 +238,13 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
         #action_ascii = convert_to_ascii(action)
         action_path = create_action_folder(DATA_PATH, action)
 
-        idx = 0
+        # lấy số file đã có để tiếp tục ghi
+        existing_files = [
+            f for f in os.listdir(action_path)
+            if f.endswith('.npz')
+        ]
+        idx = len(existing_files)
+
         #sequence_folder = os.path.join(action_path, str(idx))
         #os.makedirs(sequence_folder, exist_ok=True)
 
@@ -249,19 +255,23 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
             continue
         frame_lists = sequence_frames(video_path, holistic)
 
-        augmenteds = generate_augmented_samples(frame_lists,augmentations,1000,5)
+        augmenteds = generate_augmented_samples(frame_lists, augmentations, 50, 2)
+
         augmenteds.append(frame_lists)
 
         for aug in augmenteds:
-          seq = interpolate_keypoints(aug)
-           # Lưu .npz chứa sequence và label
-          file_path = os.path.join(action_path, f'{idx}.npz')
-          np.savez(
-              file_path,
-              sequence=seq,
-              label=label
-          )
-          idx += 1
+            seq = interpolate_keypoints(aug)
+
+            if seq is None or np.isnan(seq).any():
+                continue   # bỏ sample lỗi
+
+            file_path = os.path.join(action_path, f'{idx}.npz')
+            np.savez(
+                file_path,
+                sequence=seq.astype(np.float32),
+                label=label
+            )
+            idx += 1
 
         #current_state['progress'].update({action: idx + 1})
         #save_progress_state(current_state, LOG_PATH)
