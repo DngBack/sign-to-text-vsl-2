@@ -68,6 +68,7 @@ python create_data_augment.py
 - Open ```training.ipynb``` in a Jupyter Notebook environment.
 - Run all cells to train the model.
 - Note: Training is computationally intensive and best performed on a GPU-enabled device.
+jupyter notebook
 5. Run the Application.
 ```bash
 streamlit run main.py
