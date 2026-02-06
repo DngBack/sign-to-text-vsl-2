@@ -1,100 +1,201 @@
 ID,VIDEO,LABEL
-1,D0001N.mp4,địa chỉ
+1,D0001B.mp4,địa chỉ
 2,D0002.mp4,tỉnh
-3,D0003.mp4,tiếp tân
-4,D0001T.mp4,địa chỉ
-5,D0001B.mp4,địa chỉ
-6,D0005N.mp4,Miến Điện (nước Mi-an-ma)
-7,D0005T.mp4,Miến Điện (nước Mi-an-ma)
-8,D0004.mp4,nhân viên
-9,D0005B.mp4,Miến Điện (nước Mi-an-ma)
-10,D0008.mp4,Ả Rập (nước Ả Rập)
-11,D0009.mp4,phương Tây
-12,D0010.mp4,phương Đông
-13,D0006.mp4,Ma Cao
-14,D0011.mp4,Đu Bai (nước Đu Bai)
+3,D0001T.mp4,địa chỉ
+4,D0004.mp4,nhân viên
+5,D0001N.mp4,địa chỉ
+6,D0003.mp4,tiếp tân
+7,D0005N.mp4,Miến Điện (nước Mi-an-ma)
+8,D0006.mp4,Ma Cao
+9,D0007.mp4,Do Thái
+10,D0005T.mp4,Miến Điện (nước Mi-an-ma)
+11,D0005B.mp4,Miến Điện (nước Mi-an-ma)
+12,D0008.mp4,Ả Rập (nước Ả Rập)
+12,D0009.mp4,phương Tây
+14,D0010.mp4,phương Đông
 15,D0012.mp4,Albania (nước Albania)
-16,D0013.mp4,người nước ngoài
-17,D0007.mp4,Do Thái
-18,D0015.mp4,Tuy Hoà
-19,D0014.mp4,nhập khẩu
-20,D0016.mp4,Quy Nhơn
-21,D0019B.mp4,ghen tị
-22,D0019N.mp4,ghen tị
-23,D0019T.mp4,ghen tị
-24,D0017.mp4,hấp dẫn
-25,D0020N.mp4,lung tung
-26,D0020B.mp4,lung tung
+16,D0014.mp4,nhập khẩu
+17,D0011.mp4,Đu Bai (nước Đu Bai)
+18,D0013.mp4,người nước ngoài
+19,D0017.mp4,hấp dẫn
+20,D0018.mp4,nổi da gà
+21,D0015.mp4,Tuy Hoà
+22,D0019B.mp4,ghen tị
+23,D0016.mp4,Quy Nhơn
+24,D0019T.mp4,ghen tị
+25,D0020B.mp4,lung tung
+26,D0020N.mp4,lung tung
 27,D0021.mp4,hói đầu
-28,D0022.mp4,cười nhếch mép
-29,D0020T.mp4,lung tung
-30,D0024B.mp4,tham ăn
-31,D0024N.mp4,tham ăn
+28,D0020T.mp4,lung tung
+28,D0019N.mp4,ghen tị
+30,D0022.mp4,cười nhếch mép
+31,D0024B.mp4,tham ăn
 32,D0024T.mp4,tham ăn
 33,D0026.mp4,thèm
 34,D0027.mp4,thèm rỏ dãi
-35,D0028.mp4,đứng đầu (hàng đầu)
-36,D0029B.mp4,thói quen
-37,D0023.mp4,cười vỡ bụng
-38,D0029N.mp4,thói quen
-39,D0030.mp4,khuyến khích
-39,D0029T.mp4,thói quen
-41,D0031B.mp4,không nghe lời
-42,D0031N.mp4,không nghe lời
-43,D0031T.mp4,không nghe lời
-44,D0018.mp4,nổi da gà
-45,D0032.mp4,ai cho
-46,D0033N.mp4,không cho
-47,D0033T.mp4,không cho
-48,D0034.mp4,không cần
-49,D0035B.mp4,không nên
-50,D0035N.mp4,không nên
-51,D0035T.mp4,không nên
-52,D0036.mp4,bực mình
-53,D0033B.mp4,không cho
-54,D0038.mp4,mù chữ
-55,D0037.mp4,tự giác
-56,D0039.mp4,vô tình
-57,D0040T.mp4,Tết hàn thực
-58,D0041.mp4,giỗ
-59,D0040N.mp4,Tết hàn thực
+35,D0024N.mp4,tham ăn
+36,D0028.mp4,đứng đầu (hàng đầu)
+37,D0029B.mp4,thói quen
+38,D0023.mp4,cười vỡ bụng
+39,D0029N.mp4,thói quen
+40,D0029T.mp4,thói quen
+41,D0031N.mp4,không nghe lời
+42,D0031T.mp4,không nghe lời
+43,D0030.mp4,khuyến khích
+44,D0031B.mp4,không nghe lời
+45,D0033B.mp4,không cho
+46,D0032.mp4,ai cho
+47,D0033N.mp4,không cho
+48,D0035B.mp4,không nên
+49,D0035N.mp4,không nên
+50,D0035T.mp4,không nên
+51,D0033T.mp4,không cho
+52,D0034.mp4,không cần
+53,D0036.mp4,bực mình
+54,D0037.mp4,tự giác
+55,D0038.mp4,mù chữ
+56,D0040N.mp4,Tết hàn thực
+57,D0040B.mp4,Tết hàn thực
+58,D0039.mp4,vô tình
+59,D0041.mp4,giỗ
+60,D0040T.mp4,Tết hàn thực
 60,D0042N.mp4,ngày Quốc tế phụ nữ 8/3
-61,D0042T.mp4,ngày Quốc tế phụ nữ 8/3
-62,D0040B.mp4,Tết hàn thực
+62,D0043B.mp4,ngày giải phóng thủ đô 10/10
 63,D0042B.mp4,ngày Quốc tế phụ nữ 8/3
-64,D0043B.mp4,ngày giải phóng thủ đô 10/10
-65,D0043N.mp4,ngày giải phóng thủ đô 10/10
+64,D0043T.mp4,ngày giải phóng thủ đô 10/10
+65,D0042T.mp4,ngày Quốc tế phụ nữ 8/3
 66,D0044N.mp4,ngày Giải phóng miền Nam 30/4
-67,D0044T.mp4,ngày Giải phóng miền Nam 30/4
-68,D0045B.mp4,ngày Người khuyết tật Việt Nam 18/4
-68,D0043T.mp4,ngày giải phóng thủ đô 10/10
-70,D0044B.mp4,ngày Giải phóng miền Nam 30/4
-71,D0045N.mp4,ngày Người khuyết tật Việt Nam 18/4
-72,D0046N.mp4,ngày Người khuyết tật Thế giới 3/12
-73,D0045T.mp4,ngày Người khuyết tật Việt Nam 18/4
-74,D0046T.mp4,ngày Người khuyết tật Thế giới 3/12
-75,D0046B.mp4,ngày Người khuyết tật Thế giới 3/12
+67,D0043N.mp4,ngày giải phóng thủ đô 10/10
+68,D0044T.mp4,ngày Giải phóng miền Nam 30/4
+69,D0044B.mp4,ngày Giải phóng miền Nam 30/4
+70,D0045T.mp4,ngày Người khuyết tật Việt Nam 18/4
+71,D0046B.mp4,ngày Người khuyết tật Thế giới 3/12
+72,D0045N.mp4,ngày Người khuyết tật Việt Nam 18/4
+73,D0046T.mp4,ngày Người khuyết tật Thế giới 3/12
+74,D0048B.mp4,lễ Halloween 31/10
+75,D0046N.mp4,ngày Người khuyết tật Thế giới 3/12
+76,D0045B.mp4,ngày Người khuyết tật Việt Nam 18/4
 76,D0048N.mp4,lễ Halloween 31/10
-77,D0048B.mp4,lễ Halloween 31/10
-78,D0049N.mp4,ngày Phụ nữ Việt Nam 20/10
-79,D0049B.mp4,ngày Phụ nữ Việt Nam 20/10
-80,D0048T.mp4,lễ Halloween 31/10
+78,D0049B.mp4,ngày Phụ nữ Việt Nam 20/10
+79,D0048T.mp4,lễ Halloween 31/10
+80,D0050B.mp4,ngày thương bình liệt sĩ 27/7
 81,D0050N.mp4,ngày thương bình liệt sĩ 27/7
-82,D0050T.mp4,ngày thương bình liệt sĩ 27/7
-83,D0051B.mp4,ngày giỗ tổ Hùng Vương (âm lịch 10/3)
-84,D0050B.mp4,ngày thương bình liệt sĩ 27/7
-85,D0051N.mp4,ngày giỗ tổ Hùng Vương (âm lịch 10/3)
-86,D0052B.mp4,ngày Ngôn ngữ kí hiệu Quốc tế 23/9
-87,D0051T.mp4,ngày giỗ tổ Hùng Vương (âm lịch 10/3)
+82,D0049N.mp4,ngày Phụ nữ Việt Nam 20/10
+83,D0050T.mp4,ngày thương bình liệt sĩ 27/7
+84,D0051B.mp4,ngày giỗ tổ Hùng Vương (âm lịch 10/3)
+85,D0049T.mp4,ngày Phụ nữ Việt Nam 20/10
+86,D0051T.mp4,ngày giỗ tổ Hùng Vương (âm lịch 10/3)
+87,D0052B.mp4,ngày Ngôn ngữ kí hiệu Quốc tế 23/9
 88,D0052N.mp4,ngày Ngôn ngữ kí hiệu Quốc tế 23/9
-89,D0053B.mp4,tuần lễ người Điếc thế giới
-90,D0052T.mp4,ngày Ngôn ngữ kí hiệu Quốc tế 23/9
-91,D0053N.mp4,tuần lễ người Điếc thế giới
-92,D0053T.mp4,tuần lễ người Điếc thế giới
+89,D0051N.mp4,ngày giỗ tổ Hùng Vương (âm lịch 10/3)
+90,D0053B.mp4,tuần lễ người Điếc thế giới
+91,D0052T.mp4,ngày Ngôn ngữ kí hiệu Quốc tế 23/9
+92,D0053N.mp4,tuần lễ người Điếc thế giới
 93,D0054N.mp4,ngày của Mẹ
-94,D0054T.mp4,ngày của Mẹ
-95,D0054B.mp4,ngày của Mẹ
-96,D0055B.mp4,ngày của Cha
+94,D0054B.mp4,ngày của Mẹ
+95,D0053T.mp4,tuần lễ người Điếc thế giới
+96,D0054T.mp4,ngày của Mẹ
 97,D0055T.mp4,ngày của Cha
-98,D0056B.mp4,ngày gia đình Việt Nam 28/6
-99,D0055N.mp4,ngày của Cha
+97,D0055B.mp4,ngày của Cha
+99,D0056N.mp4,ngày gia đình Việt Nam 28/6
+100,D0056T.mp4,ngày gia đình Việt Nam 28/6
+101,D0055N.mp4,ngày của Cha
+102,D0056B.mp4,ngày gia đình Việt Nam 28/6
+103,D0057N.mp4,ngày thầy thuốc Việt Nam
+104,D0057T.mp4,ngày thầy thuốc Việt Nam
+105,D0057B.mp4,ngày thầy thuốc Việt Nam
+106,D0058B.mp4,ngày thành lập quân đội nhân dân Việt Nam
+107,D0059.mp4,con cá sấu
+108,D0058N.mp4,ngày thành lập quân đội nhân dân Việt Nam
+108,D0058T.mp4,ngày thành lập quân đội nhân dân Việt Nam
+110,D0060N.mp4,nhầm
+111,D0060T.mp4,nhầm
+112,D0060B.mp4,nhầm
+113,D0061.mp4,đồng bằng sông Cửu Long
+114,D0064.mp4,buồn thảm
+115,D0062.mp4,đồng bằng sông Hồng
+116,D0065N.mp4,mách
+117,D0065T.mp4,mách
+118,D0066B.mp4,vô duyên
+119,D0063.mp4,đồng bằng duyên hải miền Trung
+120,D0065B.mp4,mách
+121,D0066T.mp4,vô duyên
+122,D0068.mp4,kịp thời
+123,D0069.mp4,bối rối
+124,D0066N.mp4,vô duyên
+125,D0067.mp4,ti hí mắt
+126,D0071.mp4,suỵt
+127,D0072B.mp4,suýt
+128,D0072T.mp4,suýt
+129,D0070.mp4,hú vía
+130,D0074.mp4,cá kiếm
+131,D0072N.mp4,suýt
+132,D0075.mp4,đuôi cá
+133,D0073.mp4,cá voi
+134,D0076.mp4,đuôi chuột
+135,D0077B.mp4,bít tết (bò)
+136,D0077T.mp4,bít tết (bò)
+137,D0078.mp4,súp
+138,D0080B.mp4,mỳ tôm
+139,D0077N.mp4,bít tết (bò)
+140,D0080N.mp4,mỳ tôm
+141,D0081B.mp4,mỳ vằn thắn
+142,D0079.mp4,súp lơ
+143,D0082B.mp4,mỳ ý
+144,D0082N.mp4,mỳ ý
+145,D0082T.mp4,mỳ ý
+145,D0080T.mp4,mỳ tôm
+147,D0083.mp4,bún mắm
+148,D0086.mp4,bún ốc
+149,D0084.mp4,bún chả
+150,D0087B.mp4,bún đậu
+151,D0085.mp4,bún ngan
+152,D0089.mp4,xôi gà
+153,D0090.mp4,cháo sườn
+154,D0088.mp4,xôi gấc
+155,D0091.mp4,cơm rang
+156,D0092.mp4,nhấn mạnh
+157,D0094.mp4,thí nghiệm
+158,D0095.mp4,cắm trại
+159,D0093.mp4,đạo diễn
+160,D0098.mp4,có … không?
+161,D0099.mp4,cung cấp
+162,D0097.mp4,kỹ năng
+163,D0100.mp4,khờ dại
+164,D0102.mp4,may mắn
+165,D0096.mp4,khả năng
+166,D0103B.mp4,từ chối
+167,D0101.mp4,cực khổ
+168,D0104.mp4,nấu nướng
+169,D0105.mp4,xoa đầu
+170,D0107.mp4,rực rỡ
+171,D0103N.mp4,từ chối
+172,D0108N.mp4,thiệp sinh nhật
+173,D0108B.mp4,thiệp sinh nhật
+174,D0109B.mp4,không quen
+175,D0109N.mp4,không quen
+176,D0109T.mp4,không quen
+177,D0110.mp4,bánh tráng
+178,D0111B.mp4,tương ớt
+179,D0111N.mp4,tương ớt
+180,D0108T.mp4,thiệp sinh nhật
+181,D0111T.mp4,tương ớt
+182,D0112.mp4,không có
+183,D0113.mp4,không có chi
+184,D0115.mp4,xử lý
+184,D0114.mp4,dân chủ
+186,D0103T.mp4,từ chối
+187,D0116.mp4,đất ruộng
+188,D0117.mp4,tinh mắt
+189,D0119B.mp4,đúng không?
+190,D0119N.mp4,đúng không?
+191,D0119T.mp4,đúng không?
+192,D0120N.mp4,phải không?
+193,D0118.mp4,cũng vậy/cũng thế
+194,D0120B.mp4,phải không?
+195,D0121.mp4,còn bạn?
+196,D0122B.mp4,cần không?
+197,D0120T.mp4,phải không?
+198,D0122T.mp4,cần không?
+199,D0122N.mp4,cần không?
+200,D0123B.mp4,nên không?

@@ -196,7 +196,7 @@ def crawl_videos():
     driver = webdriver.Chrome(service=service, options=options)
 
     videos = []
-    TARGET = 100   # muốn bao nhiêu video thì đổi số này
+    TARGET = 200   # muốn bao nhiêu video thì đổi số này
 
     try:
         driver.get("https://qipedc.moet.gov.vn/dictionary")
