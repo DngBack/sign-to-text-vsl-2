@@ -1,0 +1,24 @@
+VIDEO: D0007.mp4
+  TRUE : Do Thái
+  PRED : Albania (nước Albania)
+  CONF : 0.9619
+  TOP5: Albania (nước Albania), Do Thái, không cần, tỉnh, phương Tây
+----------------------------------------
+VIDEO: D0029B.mp4
+  TRUE : thói quen
+  PRED : ghen tị
+  CONF : 0.7579
+  TOP5: ghen tị, thói quen, Ả Rập (nước Ả Rập), hói đầu, không cần
+----------------------------------------
+VIDEO: D0049N.mp4
+  TRUE : ngày Phụ nữ Việt Nam 20/10
+  PRED : ngày Người khuyết tật Việt Nam 18/4
+  CONF : 0.7227
+  TOP5: ngày Người khuyết tật Việt Nam 18/4, ngày Phụ nữ Việt Nam 20/10, ngày Người khuyết tật Thế giới 3/12, ngày Quốc tế phụ nữ 8/3, ngày giải phóng thủ đô 10/10
+----------------------------------------
+VIDEO: D0055N.mp4
+  TRUE : ngày của Cha
+  PRED : ngày của Mẹ
+  CONF : 0.8163
+  TOP5: ngày của Mẹ, ngày của Cha, Do Thái, nổi da gà, ngày gia đình Việt Nam 28/6
+----------------------------------------
