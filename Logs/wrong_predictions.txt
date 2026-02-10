@@ -1,24 +1,432 @@
 VIDEO: D0007.mp4
   TRUE : Do Thái
-  PRED : Albania (nước Albania)
-  CONF : 0.9619
-  TOP5: Albania (nước Albania), Do Thái, không cần, tỉnh, phương Tây
+  PRED : nhấn mạnh
+  CONF : 0.5510
+  TOP5: nhấn mạnh, cắm trại, Do Thái, địa chỉ, đồng bằng sông Hồng
 ----------------------------------------
-VIDEO: D0029B.mp4
-  TRUE : thói quen
-  PRED : ghen tị
-  CONF : 0.7579
-  TOP5: ghen tị, thói quen, Ả Rập (nước Ả Rập), hói đầu, không cần
+VIDEO: D0008.mp4
+  TRUE : Ả Rập (nước Ả Rập)
+  PRED : suỵt
+  CONF : 0.9947
+  TOP5: suỵt, Ả Rập (nước Ả Rập), phương Tây, vô duyên, hấp dẫn
 ----------------------------------------
-VIDEO: D0049N.mp4
-  TRUE : ngày Phụ nữ Việt Nam 20/10
-  PRED : ngày Người khuyết tật Việt Nam 18/4
-  CONF : 0.7227
-  TOP5: ngày Người khuyết tật Việt Nam 18/4, ngày Phụ nữ Việt Nam 20/10, ngày Người khuyết tật Thế giới 3/12, ngày Quốc tế phụ nữ 8/3, ngày giải phóng thủ đô 10/10
+VIDEO: D0009.mp4
+  TRUE : phương Tây
+  PRED : Ả Rập (nước Ả Rập)
+  CONF : 0.9634
+  TOP5: Ả Rập (nước Ả Rập), ghen tị, phương Tây, vô duyên, cực khổ
 ----------------------------------------
-VIDEO: D0055N.mp4
+VIDEO: D0012.mp4
+  TRUE : Albania (nước Albania)
+  PRED : cắm trại
+  CONF : 0.9993
+  TOP5: cắm trại, Do Thái, nhấn mạnh, địa chỉ, tỉnh
+----------------------------------------
+VIDEO: D0018.mp4
+  TRUE : nổi da gà
+  PRED : Quy Nhơn
+  CONF : 0.9939
+  TOP5: Quy Nhơn, nổi da gà, nhấn mạnh, khuyến khích, kỹ năng
+----------------------------------------
+VIDEO: D0020B.mp4
+  TRUE : lung tung
+  PRED : may mắn
+  CONF : 0.8419
+  TOP5: may mắn, lung tung, thường xuyên, không nghe lời, cá kiếm
+----------------------------------------
+VIDEO: D0020N.mp4
+  TRUE : lung tung
+  PRED : quả bầu hồ lô
+  CONF : 0.7070
+  TOP5: quả bầu hồ lô, lung tung, bốn là, không nên, lễ Halloween 31/10
+----------------------------------------
+VIDEO: D0026.mp4
+  TRUE : thèm
+  PRED : từ chối
+  CONF : 0.9899
+  TOP5: từ chối, thèm, hói đầu, tương ớt, về 3 (đi về)
+----------------------------------------
+VIDEO: D0031B.mp4
+  TRUE : không nghe lời
+  PRED : mách
+  CONF : 0.9946
+  TOP5: mách, hẹn, không có chi, Tuy Hoà, thường xuyên
+----------------------------------------
+VIDEO: D0053B.mp4
+  TRUE : tuần lễ người Điếc thế giới
+  PRED : ngày gia đình Việt Nam 28/6
+  CONF : 0.9999
+  TOP5: ngày gia đình Việt Nam 28/6, tuần lễ người Điếc thế giới, đồng bằng sông Cửu Long, thiệp sinh nhật, ngày thầy thuốc Việt Nam
+----------------------------------------
+VIDEO: D0055B.mp4
   TRUE : ngày của Cha
   PRED : ngày của Mẹ
-  CONF : 0.8163
-  TOP5: ngày của Mẹ, ngày của Cha, Do Thái, nổi da gà, ngày gia đình Việt Nam 28/6
+  CONF : 0.6270
+  TOP5: ngày của Mẹ, ngày của Cha, Ma Cao, Do Thái, tỉnh
+----------------------------------------
+VIDEO: D0056T.mp4
+  TRUE : ngày gia đình Việt Nam 28/6
+  PRED : ngày Người khuyết tật Việt Nam 18/4
+  CONF : 0.9486
+  TOP5: ngày Người khuyết tật Việt Nam 18/4, rực rỡ, ngày giải phóng thủ đô 10/10, ăn vú sữa (bằng thìa), một là
+----------------------------------------
+VIDEO: D0060B.mp4
+  TRUE : nhầm
+  PRED : đi dạo
+  CONF : 0.8670
+  TOP5: đi dạo, nhầm, về (Sài Gòn), tương ớt, về 2 (Miền Bắc)
+----------------------------------------
+VIDEO: D0060N.mp4
+  TRUE : nhầm
+  PRED : hẹn
+  CONF : 0.9888
+  TOP5: hẹn, tự giác, Miến Điện (nước Mi-an-ma), mù chữ, xoa đầu
+----------------------------------------
+VIDEO: D0060T.mp4
+  TRUE : nhầm
+  PRED : người nước ngoài
+  CONF : 0.9926
+  TOP5: người nước ngoài, bạn yêu tôi, ghen tị, nhầm, phương Tây
+----------------------------------------
+VIDEO: D0065B.mp4
+  TRUE : mách
+  PRED : hứa
+  CONF : 0.9955
+  TOP5: hứa, thèm, ghen tị, hói đầu, thói quen
+----------------------------------------
+VIDEO: D0065N.mp4
+  TRUE : mách
+  PRED : Ma Cao
+  CONF : 0.9836
+  TOP5: Ma Cao, Tuy Hoà, sống sót, nhân viên, mách
+----------------------------------------
+VIDEO: D0065T.mp4
+  TRUE : mách
+  PRED : Ma Cao
+  CONF : 0.5599
+  TOP5: Ma Cao, sống sót, mách, phương Đông, thường xuyên
+----------------------------------------
+VIDEO: D0066B.mp4
+  TRUE : vô duyên
+  PRED : phương Tây
+  CONF : 0.8150
+  TOP5: phương Tây, Ả Rập (nước Ả Rập), ghen tị, người nước ngoài, bạn yêu tôi
+----------------------------------------
+VIDEO: D0070.mp4
+  TRUE : hú vía
+  PRED : nhầm
+  CONF : 0.6842
+  TOP5: nhầm, cơm rang, cháu họ, hú vía, suýt
+----------------------------------------
+VIDEO: D0076.mp4
+  TRUE : đuôi chuột
+  PRED : địa chỉ
+  CONF : 0.6924
+  TOP5: địa chỉ, đuôi chuột, kỹ năng, đồng bằng sông Cửu Long, cá kiếm
+----------------------------------------
+VIDEO: D0079.mp4
+  TRUE : súp lơ
+  PRED : thiệp sinh nhật
+  CONF : 0.9298
+  TOP5: thiệp sinh nhật, bún ốc, Quy Nhơn, hứa, ngày gia đình Việt Nam 28/6
+----------------------------------------
+VIDEO: D0080T.mp4
+  TRUE : mỳ tôm
+  PRED : bít tết (bò)
+  CONF : 0.7737
+  TOP5: bít tết (bò), súp, mỳ tôm, cháo sườn, bún ốc
+----------------------------------------
+VIDEO: D0081B.mp4
+  TRUE : mỳ vằn thắn
+  PRED : thiệp sinh nhật
+  CONF : 0.7050
+  TOP5: thiệp sinh nhật, bún ốc, không có chi, cháu họ, nấu nướng
+----------------------------------------
+VIDEO: D0082B.mp4
+  TRUE : mỳ ý
+  PRED : mỳ tôm
+  CONF : 0.6031
+  TOP5: mỳ tôm, mỳ ý, 5 > 3 (Toán học), họ (đại từ), rực rỡ
+----------------------------------------
+VIDEO: D0087B.mp4
+  TRUE : bún đậu
+  PRED : về (Sài Gòn)
+  CONF : 0.9952
+  TOP5: về (Sài Gòn), cháu họ, đi dạo, bún đậu, nhầm
+----------------------------------------
+VIDEO: D0092.mp4
+  TRUE : nhấn mạnh
+  PRED : đuôi cá
+  CONF : 0.6704
+  TOP5: đuôi cá, nhấn mạnh, kỹ năng, cắm trại, đuôi chuột
+----------------------------------------
+VIDEO: D0094.mp4
+  TRUE : thí nghiệm
+  PRED : bún mắm
+  CONF : 0.6619
+  TOP5: bún mắm, súp, bún ngan, nấu nướng, thí nghiệm
+----------------------------------------
+VIDEO: D0098.mp4
+  TRUE : có … không?
+  PRED : thói quen
+  CONF : 0.9995
+  TOP5: thói quen, có … không?, hứa, ghen tị, ai cho
+----------------------------------------
+VIDEO: D0099.mp4
+  TRUE : cung cấp
+  PRED : thí nghiệm
+  CONF : 0.7644
+  TOP5: thí nghiệm, bún ngan, ti hí mắt, cung cấp, đồng bằng duyên hải miền Trung
+----------------------------------------
+VIDEO: D0100.mp4
+  TRUE : khờ dại
+  PRED : súp
+  CONF : 0.5034
+  TOP5: súp, cháo sườn, nấu nướng, thí nghiệm, khờ dại
+----------------------------------------
+VIDEO: D0103T.mp4
+  TRUE : từ chối
+  PRED : thèm
+  CONF : 0.9946
+  TOP5: thèm, thói quen, hứa, ghen tị, hói đầu
+----------------------------------------
+VIDEO: D0104.mp4
+  TRUE : nấu nướng
+  PRED : ngày gia đình Việt Nam 28/6
+  CONF : 0.9619
+  TOP5: ngày gia đình Việt Nam 28/6, thiệp sinh nhật, ngày thành lập quân đội nhân dân Việt Nam, cháu họ, nấu nướng
+----------------------------------------
+VIDEO: D0108N.mp4
+  TRUE : thiệp sinh nhật
+  PRED : chúng tôi (3 người) (đại từ)
+  CONF : 0.9509
+  TOP5: chúng tôi (3 người) (đại từ), chúng tôi (2 người) (đại từ), bún đậu, một là, em họ
+----------------------------------------
+VIDEO: D0108T.mp4
+  TRUE : thiệp sinh nhật
+  PRED : chúng tôi (2 người) (đại từ)
+  CONF : 0.9497
+  TOP5: chúng tôi (2 người) (đại từ), chúng tôi (3 người) (đại từ), bún đậu, một là, ngày Quốc tế phụ nữ 8/3
+----------------------------------------
+VIDEO: D0111N.mp4
+  TRUE : tương ớt
+  PRED : đi dạo
+  CONF : 0.9975
+  TOP5: đi dạo, nhầm, về (Sài Gòn), suýt, tương ớt
+----------------------------------------
+VIDEO: D0112.mp4
+  TRUE : không có
+  PRED : tham ăn
+  CONF : 0.9617
+  TOP5: tham ăn, không có, ngày Phụ nữ Việt Nam 20/10, lung tung, cung điện
+----------------------------------------
+VIDEO: D0114.mp4
+  TRUE : dân chủ
+  PRED : nhầm
+  CONF : 0.8648
+  TOP5: nhầm, suýt, hú vía, mỗi ngày, em họ
+----------------------------------------
+VIDEO: D0115.mp4
+  TRUE : xử lý
+  PRED : cùng / với (giới từ)
+  CONF : 0.8635
+  TOP5: cùng / với (giới từ), căm thù, đứng đầu (hàng đầu), bốn là, 2 < 6 (Toán học)
+----------------------------------------
+VIDEO: D0117.mp4
+  TRUE : tinh mắt
+  PRED : hôi
+  CONF : 0.8108
+  TOP5: hôi, một ít/ một chút, còn bạn?, một là, tham ăn
+----------------------------------------
+VIDEO: D0119B.mp4
+  TRUE : đúng không?
+  PRED : tôi yêu bạn ấy
+  CONF : 0.5756
+  TOP5: tôi yêu bạn ấy, cần không?, chậm chạp, không nghe lời, thường xuyên
+----------------------------------------
+VIDEO: D0122T.mp4
+  TRUE : cần không?
+  PRED : không nên
+  CONF : 0.8003
+  TOP5: không nên, cần không?, không đẹp, quả bầu hồ lô, không có
+----------------------------------------
+VIDEO: D0124.mp4
+  TRUE : kia
+  PRED : không đẹp
+  CONF : 0.9607
+  TOP5: không đẹp, một ít/ một chút, phải không?, tham ăn, mỗi ngày
+----------------------------------------
+VIDEO: D0126.mp4
+  TRUE : sợ không?
+  PRED : ngày Người khuyết tật Việt Nam 18/4
+  CONF : 0.9744
+  TOP5: ngày Người khuyết tật Việt Nam 18/4, một là, ngày Phụ nữ Việt Nam 20/10, chậm chạp, ngày Quốc tế phụ nữ 8/3
+----------------------------------------
+VIDEO: D0131.mp4
+  TRUE : chúng tôi (3 người) (đại từ)
+  PRED : bay nhanh (máy bay)
+  CONF : 0.6609
+  TOP5: bay nhanh (máy bay), chúng tôi (2 người) (đại từ), chúng tôi (đại từ), nóng tính, chúng tôi (3 người) (đại từ)
+----------------------------------------
+VIDEO: D0132.mp4
+  TRUE : chúng tôi (4 người) (đại từ)
+  PRED : nóng tính
+  CONF : 0.9999
+  TOP5: nóng tính, bay nhanh (máy bay), các bạn (2 người), chúng tôi (đại từ), lung tung
+----------------------------------------
+VIDEO: D0134.mp4
+  TRUE : chúng tôi (đại từ)
+  PRED : nóng tính
+  CONF : 0.9990
+  TOP5: nóng tính, không đẹp, chị họ, tinh mắt, ăn vú sữa
+----------------------------------------
+VIDEO: D0135.mp4
+  TRUE : các bạn (2 người)
+  PRED : vô duyên
+  CONF : 0.7377
+  TOP5: vô duyên, vẫn, ông bà, tương ớt, bạn ấy yêu tôi
+----------------------------------------
+VIDEO: D0136.mp4
+  TRUE : họ (2 người) (đại từ)
+  PRED : ông bà
+  CONF : 0.6472
+  TOP5: ông bà, vô duyên, họ (2 người) (đại từ), mách, về 5 (về nhà)
+----------------------------------------
+VIDEO: D0137.mp4
+  TRUE : họ (đại từ)
+  PRED : về 4 (từ nơi khác về)
+  CONF : 0.9886
+  TOP5: về 4 (từ nơi khác về), chúng tôi (3 người) (đại từ), họ (đại từ), bay nhanh (máy bay), nhầm
+----------------------------------------
+VIDEO: D0146.mp4
+  TRUE : một là
+  PRED : căm thù
+  CONF : 0.9332
+  TOP5: căm thù, một là, cùng / với (giới từ), không nghe lời, xử lý
+----------------------------------------
+VIDEO: D0151N.mp4
+  TRUE : ông bà
+  PRED : tương ớt
+  CONF : 0.7967
+  TOP5: tương ớt, ông bà, đi dạo, ngày thành lập quân đội nhân dân Việt Nam, vẫn
+----------------------------------------
+VIDEO: D0153B.mp4
+  TRUE : em họ
+  PRED : 5 > 3 (Toán học)
+  CONF : 0.8988
+  TOP5: 5 > 3 (Toán học), ông bà, ngày gia đình Việt Nam 28/6, tương ớt, về (Sài Gòn)
+----------------------------------------
+VIDEO: D0153T.mp4
+  TRUE : em họ
+  PRED : cơm rang
+  CONF : 0.7649
+  TOP5: cơm rang, lung tung, nổi da gà, thường xuyên, tương ớt
+----------------------------------------
+VIDEO: D0154N.mp4
+  TRUE : cháu họ
+  PRED : Đu Bai (nước Đu Bai)
+  CONF : 0.9994
+  TOP5: Đu Bai (nước Đu Bai), cháo sườn, bít tết (bò), cười vỡ bụng, cháu họ
+----------------------------------------
+VIDEO: D0155N.mp4
+  TRUE : sống sót
+  PRED : cơm rang
+  CONF : 0.3598
+  TOP5: cơm rang, xôi gà, lung tung, hứa, nhầm
+----------------------------------------
+VIDEO: D0155T.mp4
+  TRUE : sống sót
+  PRED : phương Đông
+  CONF : 0.6057
+  TOP5: phương Đông, sống sót, thói quen, Ma Cao, không cho
+----------------------------------------
+VIDEO: D0156.mp4
+  TRUE : thường xuyên
+  PRED : bánh tráng
+  CONF : 0.4291
+  TOP5: bánh tráng, dừng lại, kia, bạn ấy yêu tôi, đúng không?
+----------------------------------------
+VIDEO: D0157B.mp4
+  TRUE : đi dạo
+  PRED : hấp dẫn
+  CONF : 0.4979
+  TOP5: hấp dẫn, buồn thảm, xôi gấc, bạn yêu tôi, đi dạo
+----------------------------------------
+VIDEO: D0157N.mp4
+  TRUE : đi dạo
+  PRED : ông bà
+  CONF : 0.9979
+  TOP5: ông bà, về 3 (đi về), họ (2 người) (đại từ), về 5 (về nhà), nhân viên
+----------------------------------------
+VIDEO: D0157T.mp4
+  TRUE : đi dạo
+  PRED : buồn thảm
+  CONF : 0.5817
+  TOP5: buồn thảm, hấp dẫn, xôi gấc, đi dạo, mỗi ngày
+----------------------------------------
+VIDEO: D0158N.mp4
+  TRUE : về (Sài Gòn)
+  PRED : đi dạo
+  CONF : 0.7767
+  TOP5: đi dạo, về (Sài Gòn), nhầm, xôi gấc, tương ớt
+----------------------------------------
+VIDEO: D0159B.mp4
+  TRUE : về 2 (Miền Bắc)
+  PRED : xôi gấc
+  CONF : 0.7479
+  TOP5: xôi gấc, nhầm, xoa đầu, mỗi ngày, về 2 (Miền Bắc)
+----------------------------------------
+VIDEO: D0161.mp4
+  TRUE : về 4 (từ nơi khác về)
+  PRED : đi dạo
+  CONF : 0.9983
+  TOP5: đi dạo, tương ớt, về (Sài Gòn), ông bà, về 2 (Miền Bắc)
+----------------------------------------
+VIDEO: D0162.mp4
+  TRUE : về 5 (về nhà)
+  PRED : em họ
+  CONF : 0.9791
+  TOP5: em họ, về 5 (về nhà), cháu họ, chị họ, các bạn (2 người)
+----------------------------------------
+VIDEO: D0163B.mp4
+  TRUE : hẹn
+  PRED : vô duyên
+  CONF : 0.7210
+  TOP5: vô duyên, mách, phương Đông, ngày thành lập quân đội nhân dân Việt Nam, ngày của Cha
+----------------------------------------
+VIDEO: D0164.mp4
+  TRUE : quyến luyến
+  PRED : Tết hàn thực
+  CONF : 0.8104
+  TOP5: Tết hàn thực, ngừng lại, ngày Giải phóng miền Nam 30/4, quyến luyến, ăn vú sữa (bằng thìa)
+----------------------------------------
+VIDEO: D0165N.mp4
+  TRUE : hứa
+  PRED : mách
+  CONF : 1.0000
+  TOP5: mách, hẹn, cười nhếch mép, sống sót, có … không?
+----------------------------------------
+VIDEO: D0168B.mp4
+  TRUE : vẫn
+  PRED : hấp dẫn
+  CONF : 0.8263
+  TOP5: hấp dẫn, buồn thảm, xôi gấc, vẫn, mỗi ngày
+----------------------------------------
+VIDEO: D0169B.mp4
+  TRUE : mỗi ngày
+  PRED : xôi gấc
+  CONF : 0.6285
+  TOP5: xôi gấc, nhầm, xoa đầu, mỗi ngày, về 2 (Miền Bắc)
+----------------------------------------
+VIDEO: D0177.mp4
+  TRUE : bay nhanh (máy bay)
+  PRED : mỗi ngày
+  CONF : 0.9973
+  TOP5: mỗi ngày, kia, phải không?, không quen, thèm rỏ dãi
+----------------------------------------
+VIDEO: D0180.mp4
+  TRUE : 5 > 3 (Toán học)
+  PRED : bốn là
+  CONF : 0.9967
+  TOP5: bốn là, quả bầu hồ lô, lung tung, 5 > 3 (Toán học), ba là
 ----------------------------------------
