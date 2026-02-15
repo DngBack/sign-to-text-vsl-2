@@ -8,7 +8,7 @@ import mediapipe as mp
 from scipy.interpolate import interp1d
 import time
 st.set_page_config(page_title="VSL Prediction", layout="centered")
-st.title("DỰ ĐOÁN NGÔN NGỮ KÝ HIỆU")
+st.title("SIGN LANGUAGE PREDICTION")
 
 mp_holistic = mp.solutions.holistic
 N_UPPER_BODY_POSE_LANDMARKS = 25
@@ -18,11 +18,11 @@ N_TOTAL_LANDMARKS = N_UPPER_BODY_POSE_LANDMARKS + N_HAND_LANDMARKS + N_HAND_LAND
 ALL_POSE_CONNECTIONS = list(mp_holistic.POSE_CONNECTIONS)
 UPPER_BODY_POSE_CONNECTIONS = []
 # ====================
-# Load model và label_map
+# Load model and label_map
 # ====================
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('Models/checkpoints/final_model.keras')  # model đã huấn luyện
+    return tf.keras.models.load_model('Models/checkpoints/final_model.keras')
 
 @st.cache_data
 def load_label_map():
@@ -35,10 +35,10 @@ def load_label_map():
 model = load_model()
 label_map, inv_label_map = load_label_map()
 # ====================
-# Hàm xử lý video (placeholder)
+# Video processing functions
 # ====================
 def mediapipe_detection(image, model):
-    # Mediapipe dùng RGB, cv2 dùng BGR
+    # MediaPipe uses RGB, OpenCV uses BGR
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image.flags.writeable = False
     results = model.process(image)
@@ -62,7 +62,8 @@ def extract_keypoints(results):
     keypoints = np.concatenate([pose_kps,left_hand_kps, right_hand_kps])
     return keypoints.flatten()
 
-def interpolate_keypoints(keypoints_sequence, target_len = 60):#nội suy chuỗi keypoints về 60 frames
+def interpolate_keypoints(keypoints_sequence, target_len=60):
+    # Interpolate keypoints sequence to 60 frames
     if len(keypoints_sequence) == 0:
         return None
 
@@ -77,9 +78,9 @@ def interpolate_keypoints(keypoints_sequence, target_len = 60):#nội suy chuỗ
 
         interpolator = interp1d(
             original_times, feature_values,
-            kind='cubic', #nội suy cubic
-            bounds_error=False, #không báo lỗi nếu ngoài phạm vi
-            fill_value="extrapolate" #ngoại suy nếu cần
+            kind='cubic',
+            bounds_error=False,
+            fill_value="extrapolate"
         )
         interpolated_sequence[:, feature_idx] = interpolator(target_times)
 
@@ -90,20 +91,17 @@ def sequence_frames(video_path, holistic):
   cap = cv2.VideoCapture(video_path)
   total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-  step = max(1, total_frames // 100)  # xác định bước nhảy để lấy mẫu frames
+  step = max(1, total_frames // 100)  # step to sample frames
 
-  while cap.isOpened():#đọc từng frame từ video
+  while cap.isOpened():
       ret, frame = cap.read()
       if not ret:
           break
-
-      #nếu không phải frame cần lấy mẫu thì bỏ qua
       if int(cap.get(cv2.CAP_PROP_POS_FRAMES)) % step != 0:
           continue
-
       try:
-          image, results = mediapipe_detection(frame, holistic)#dùng mediapipe để xác định keypoints
-          keypoints = extract_keypoints(results)#trích xuất keypoints từ kết quả
+          image, results = mediapipe_detection(frame, holistic)
+          keypoints = extract_keypoints(results)
 
           if keypoints is not None:
               sequence_frames.append(keypoints)
@@ -115,38 +113,28 @@ def sequence_frames(video_path, holistic):
   return sequence_frames
 
 def process_webcam_to_sequence():
-    cap = cv2.VideoCapture(0)  # Sử dụng webcam mặc định
-    st.write("⏳ Đang chuẩn bị... Bắt đầu trong 1.5 giây...")
-    time.sleep(1.5)  # Hiển thị thông báo trong 1.5 giây
-    
-    # Đọc video từ webcam trong 4 giây
-    st.write("🎥 Đang ghi hình trong 4 giây...")
+    cap = cv2.VideoCapture(0)
+    st.write("⏳ Preparing... Starting in 1.5 seconds...")
+    time.sleep(1.5)
+    st.write("🎥 Recording for 4 seconds...")
     sequence = []
     start_time = time.time()
 
-    # Khởi tạo Mediapipe Holistic model
     holistic = mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5)
     stframe = st.empty()
 
     while True:
         ret, frame = cap.read()
         if not ret:
-            st.error("Không thể truy cập webcam")
+            st.error("Cannot access webcam")
             break
         elapsed_time = time.time() - start_time
-        if elapsed_time > 4:  # Sau 4 giây thì dừng
+        if elapsed_time > 4:
             break
-        # Chuyển đổi frame từ BGR (OpenCV) sang RGB (Mediapipe)
         image, results = mediapipe_detection(frame, holistic)
-
-        # Trích xuất keypoints từ kết quả của Mediapipe
         keypoints = extract_keypoints(results)
-        
-        # Thêm keypoints vào chuỗi (có thể dừng sau 60 frames hoặc khi người dùng nhấn nút)
         if keypoints is not None:
             sequence.append(keypoints)
-
-        # Hiển thị webcam feed trên Streamlit
         stframe.image(image, channels="BGR", caption="Webcam feed", use_container_width=True)
 
     cap.release()
@@ -155,38 +143,33 @@ def process_webcam_to_sequence():
 
 # Streamlit App
 
-input_mode = st.radio("Chọn nguồn đầu vào:", ["🎞️ Video file", "📷 Webcam"])
+input_mode = st.radio("Select input source:", ["🎞️ Video file", "📷 Webcam"])
 
 sequence = None
-holistic =mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5)
+holistic = mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 if input_mode == "🎞️ Video file":
-    uploaded_file = st.file_uploader("Tải lên video (.mp4, .avi)", type=["mp4", "avi"])
+    uploaded_file = st.file_uploader("Upload video (.mp4, .avi)", type=["mp4", "avi"])
     if uploaded_file is not None:
         with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp:
             tmp.write(uploaded_file.read())
             tmp_path = tmp.name
         st.video(tmp_path)
-        if st.button("🔍 Dự đoán từ video"):
+        if st.button("🔍 Predict from video"):
             sequence = sequence_frames(tmp_path, holistic)
 
 elif input_mode == "📷 Webcam":
-    st.warning("Nhấn nút bên dưới để bắt đầu ghi hình từ webcam.")
-    if st.button("📸 Ghi và dự đoán"):
+    st.warning("Click the button below to start recording from webcam.")
+    if st.button("📸 Record and predict"):
         sequence = process_webcam_to_sequence()
 
-# Dự đoán
+# Prediction
 if sequence is not None:
     kp = interpolate_keypoints(sequence)
-
-    preds = model.predict(np.expand_dims(kp, axis=0))[0]  # shape: (num_classes,)
-
-    # Lấy TOP 10 chỉ số có xác suất cao nhất
+    preds = model.predict(np.expand_dims(kp, axis=0))[0]
     top_k = 10
     top_indices = np.argsort(preds)[::-1][:top_k]
-
-    st.success(f"✅ Nhãn dự đoán chính: **{inv_label_map[top_indices[0]]}**")
-
-    st.markdown("### 🔝 Top 10 nhãn tương đồng nhất:")
+    st.success(f"✅ Top prediction: **{inv_label_map[top_indices[0]]}**")
+    st.markdown("### 🔝 Top 10 most similar labels:")
     for rank, idx in enumerate(top_indices, start=1):
         label = inv_label_map[idx]
         prob = preds[idx] * 100

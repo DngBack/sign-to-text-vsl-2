@@ -27,7 +27,7 @@ for connection in ALL_POSE_CONNECTIONS:
         UPPER_BODY_POSE_CONNECTIONS.append(connection)
 
 def mediapipe_detection(image, model):
-    # Mediapipe dùng RGB, cv2 dùng BGR
+    # MediaPipe uses RGB, OpenCV uses BGR
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image.flags.writeable = False
     results = model.process(image)
@@ -52,7 +52,8 @@ def extract_keypoints(results):
     return keypoints.flatten()
 
 
-def interpolate_keypoints(keypoints_sequence, target_len = 60):#nội suy chuỗi keypoints về 60 frames
+def interpolate_keypoints(keypoints_sequence, target_len=60):
+    """Interpolate keypoints sequence to 60 frames."""
     if len(keypoints_sequence) == 0:
         return None
 
@@ -67,9 +68,9 @@ def interpolate_keypoints(keypoints_sequence, target_len = 60):#nội suy chuỗ
 
         interpolator = interp1d(
             original_times, feature_values,
-            kind='cubic', #nội suy cubic
-            bounds_error=False, #không báo lỗi nếu ngoài phạm vi
-            fill_value="extrapolate" #ngoại suy nếu cần
+            kind='cubic',
+            bounds_error=False,
+            fill_value="extrapolate"
         )
         interpolated_sequence[:, feature_idx] = interpolator(target_times)
 
@@ -80,20 +81,17 @@ def sequence_frames(video_path, holistic):
   cap = cv2.VideoCapture(video_path)
   total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-  step = max(1, total_frames // 100)  # xác định bước nhảy để lấy mẫu frames
+  step = max(1, total_frames // 100)
 
-  while cap.isOpened():#đọc từng frame từ video
+  while cap.isOpened():
       ret, frame = cap.read()
       if not ret:
           break
-
-      #nếu không phải frame cần lấy mẫu thì bỏ qua
       if int(cap.get(cv2.CAP_PROP_POS_FRAMES)) % step != 0:
           continue
-
       try:
-          image, results = mediapipe_detection(frame, holistic)#dùng mediapipe để xác định keypoints
-          keypoints = extract_keypoints(results)#trích xuất keypoints từ kết quả
+          image, results = mediapipe_detection(frame, holistic)
+          keypoints = extract_keypoints(results)
 
           if keypoints is not None:
               sequence_frames.append(keypoints)
@@ -128,21 +126,19 @@ def generate_augmented_samples(
     original_sequence,
     augmentation_functions,
     num_samples_to_generate: int,
-    max_augs_per_sample: int = 3, # Số lượng phép tăng cường tối đa cho mỗi mẫu
-    #target_sequence_length: Optional[int] = None # Nếu cần pad/truncate về độ dài cố định
+    max_augs_per_sample: int = 3,
 ):
     """
-    Tạo ra nhiều mẫu tăng cường bằng cách kết hợp ngẫu nhiên các hàm tăng cường.
+    Generate augmented samples by randomly combining augmentation functions.
 
     Args:
-        original_sequence: Sequence keypoints gốc.
-        augmentation_functions: Danh sách các hàm tăng cường để chọn.
-        num_samples_to_generate: Số lượng mẫu tăng cường cần tạo.
-        max_augs_per_sample: Số lượng phép tăng cường tối đa được áp dụng cho một mẫu.
-        target_sequence_length: Độ dài mong muốn của các sequence đầu ra.
+        original_sequence: Original keypoints sequence.
+        augmentation_functions: List of augmentation functions to choose from.
+        num_samples_to_generate: Number of augmented samples to generate.
+        max_augs_per_sample: Max number of augmentations to apply per sample.
 
     Returns:
-        Danh sách các sequence keypoints đã được tăng cường.
+        List of augmented keypoints sequences.
     """
     generated_samples = []
     if not original_sequence or not augmentation_functions:
@@ -151,32 +147,20 @@ def generate_augmented_samples(
     num_available_augs = len(augmentation_functions)
 
     for i in range(num_samples_to_generate):
-        current_sequence = [kp.copy() if isinstance(kp, np.ndarray) else kp for kp in original_sequence] # Bắt đầu với bản sao
+        current_sequence = [kp.copy() if isinstance(kp, np.ndarray) else kp for kp in original_sequence]
 
-        # Chọn số lượng phép tăng cường để áp dụng (từ 1 đến max_augs_per_sample, không quá số hàm có sẵn)
         num_augs_to_apply = random.randint(1, min(max_augs_per_sample, num_available_augs))
-
-        # Chọn ngẫu nhiên các hàm tăng cường (không lặp lại)
         selected_aug_funcs_indices = random.sample(range(num_available_augs), num_augs_to_apply)
         selected_aug_funcs = [augmentation_functions[idx] for idx in selected_aug_funcs_indices]
-
-        # Xáo trộn thứ tự áp dụng (tùy chọn, nhưng thường là tốt)
         random.shuffle(selected_aug_funcs)
 
-        # print(f"Sample {i+1}: Applying {num_augs_to_apply} augmentations: {[f.__name__ for f in selected_aug_funcs]}")
-
-        # Áp dụng tuần tự
         for aug_func in selected_aug_funcs:
-            # print(f"  Applying {aug_func.__name__}...")
             current_sequence = aug_func(current_sequence)
-            # Kiểm tra nếu sequence trở thành None hoặc rỗng sau một phép aug
             if not current_sequence or all(frame is None for frame in current_sequence):
-                # print(f"  Warning: Sequence became invalid after {aug_func.__name__}. Skipping further augs for this sample.")
                 break
 
         if not current_sequence or all(frame is None for frame in current_sequence):
-            # print(f"Sample {i+1} resulted in an invalid sequence. Skipping.")
-            continue # Bỏ qua mẫu này nếu nó không hợp lệ
+            continue
 
         generated_samples.append(current_sequence)
 
@@ -209,18 +193,8 @@ with open(label_map_path, 'w', encoding='utf-8') as f:
     json.dump(label_map, f, ensure_ascii=False, indent=4)
 
 
-# lưu các hành động riêng biệt vào một file mapping
-#save_action_mapping(selected_actions, LOG_PATH)
-print(f"\n Selected {len(df['LABEL'].unique())} actions.")
+print(f"\nSelected {len(df['LABEL'].unique())} actions.")
 
-'''
-current_state = {
-        'selected_actions': list(selected_actions),  # danh sách các hành động đang xử lý
-        'progress': {
-            action: 0 for action in selected_actions # dict theo dõi tiến độ của từng hành động
-        }
-    }
-'''
 
 
 time = GetTime()
@@ -238,7 +212,6 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
         #action_ascii = convert_to_ascii(action)
         action_path = create_action_folder(DATA_PATH, action)
 
-        # lấy số file đã có để tiếp tục ghi
         existing_files = [
             f for f in os.listdir(action_path)
             if f.endswith('.npz')
@@ -263,7 +236,7 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
             seq = interpolate_keypoints(aug)
 
             if seq is None or np.isnan(seq).any():
-                continue   # bỏ sample lỗi
+                continue
 
             file_path = os.path.join(action_path, f'{idx}.npz')
             np.savez(

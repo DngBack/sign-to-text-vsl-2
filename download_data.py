@@ -196,7 +196,7 @@ def crawl_videos():
     driver = webdriver.Chrome(service=service, options=options)
 
     videos = []
-    TARGET = 100   # muốn bao nhiêu video thì đổi số này
+    TARGET = 100   # change this to set how many videos to collect
 
     try:
         driver.get("https://qipedc.moet.gov.vn/dictionary")
@@ -211,10 +211,7 @@ def crawl_videos():
             handle_recursive_scrapping(videos, driver, limit=TARGET)
             print(f"Collected {len(videos)} videos")
 
-            # tìm danh sách nút phân trang
             buttons = driver.find_elements(By.CSS_SELECTOR, "button")
-
-            # nút số thường nằm trước "Last »"
             next_page_btn = None
             for btn in buttons:
                 if btn.text.strip() == str(page + 1):
@@ -222,7 +219,7 @@ def crawl_videos():
                     break
 
             if not next_page_btn:
-                print("❌ Không còn trang tiếp theo")
+                print("❌ No more pages")
                 break
 
             driver.execute_script("arguments[0].click();", next_page_btn)
